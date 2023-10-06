@@ -1,17 +1,17 @@
 USE udemy;
 
 -- 1. Count the number of courses for the following: Python, SQL, Excel, Tableau, Power BI, Machine Learning, R Programming
--- Python Courses: 30
+-- Python Courses: 21
 SELECT COUNT(course_title) AS 'Number of Python Courses'
 FROM courses
 WHERE course_title LIKE '%Python%';
 
--- SQL Courses:12
+-- SQL Courses:13
 SELECT COUNT(course_title) AS 'Number of SQL Courses'
 FROM courses
 WHERE course_title LIKE '%sql%';
 
--- Excel Courses: 14
+-- Excel Courses: 20
 SELECT COUNT(course_title) AS 'Number of Excel Courses'
 FROM courses
 WHERE course_title LIKE '%excel%';
@@ -21,23 +21,23 @@ SELECT COUNT(course_title) AS 'Number of Tableau Courses'
 FROM courses
 WHERE course_title LIKE '%tableau%';
 
--- R Programming: 4
+-- R Programming: 1
 SELECT COUNT(course_title) AS 'Number of R Courses'
 FROM courses
 WHERE course_title LIKE '%R Programming%';
 
--- Power BI: 9
+-- Power BI: 12
 SELECT COUNT(course_title) AS 'Number of Power BI Courses'
 FROM courses
 WHERE course_title LIKE '%power bi%';
 
--- Machine Learning: 13
+-- Machine Learning: 8
 SELECT COUNT(course_title) AS 'Number of Machine Learning Courses'
 FROM courses
 WHERE course_title LIKE '%machine learning%';
 
 -- Find the Python class with the highest rating
--- 'A deep understanding of deep learning with Python' by mike X Cohen 4.8
+-- 'Business Data Analytics & Intelligence with Python' Andrei Neagole
 SELECT course_title, rating, instructor
 FROM courses
 WHERE course_title LIKE '%python%'
@@ -51,7 +51,7 @@ WHERE course_title LIKE '%sql%'
 ORDER BY rating DESC;        
 
 -- Find the Excel class with the highest rating
--- 'Microsoft Excel: Business Intelligence w/Power Query' by Maven Analytics 4.7
+-- 'Data Analysis Excel for Beginners' 4.8 by Kawser Ahmed
 SELECT course_title, rating, instructor
 FROM courses
 WHERE course_title LIKE '%excel%'
@@ -65,7 +65,7 @@ WHERE course_title LIKE '%tableau%'
 ORDER BY rating DESC;          
         
 -- Find the Power BI course with the highest rating
--- 'Microsoft Power BI Desktop' by Maven Analytics 4.7
+-- 'Data Analyst Toolbox: Excel, SQL, POWERBI' - 4.6 Vardges Zardaryan
 SELECT course_title, rating, instructor
 FROM courses
 WHERE course_title LIKE '%power bi%'
@@ -86,56 +86,50 @@ WHERE course_title LIKE '%machine learning%'
 ORDER BY rating DESC;   
 
 -- Find the Python Course with the highest student
--- Complete Python bootcamp from zero to hero' by Jose Portilla 1,792,861 students
+-- '100 days of Code' Dr Angela Yu, 1,030,009 students
 SELECT course_title, students, instructor
 FROM courses
 WHERE course_title LIKE '%python%'
 ORDER BY students DESC;   
 
 -- Find the sql Course with the highest student
--- 'The complete SQL bootcamp from zero to hero' by Jose Portilla, 726,838 students
+-- 'SQL, MySQL for Data Analysts and Business Intelligence' by 365 Careers 216,985
 SELECT course_title, students, instructor
 FROM courses
 WHERE course_title LIKE '%sql%'
 ORDER BY students DESC;   
 
 -- Find the Excel Course with the highest student
--- 'Microsoft Excel - from beginner to advanced' by Kyle Pew 1,33,793 students
+-- 'Microsoft Excel: Data Analysis with Excel Pivot Tables' by Maven Analytics 224,792 students
 SELECT course_title, students, instructor
 FROM courses
 WHERE course_title LIKE '%excel%'
 ORDER BY students DESC;   
 
 -- Find the Tableau Course with the highest student
--- 'Tableau 2022 A-Z Hands On' by Kirill Eremenko
+-- 'Tableau 2022 A-Z Hands On' by Kirill Eremenko, 363,469
 SELECT course_title, students, instructor
 FROM courses
 WHERE course_title LIKE '%tableau%'
 ORDER BY students DESC;   
 
 -- Find the Power BI Course with the highest student
--- 'Microsoft Power BI Desktop for Business Analytics' by Maven Analytics 399,961
+-- 'PL-300 Cerficiation: Microsoft Power BI Data Analyst' Philip Burton
 SELECT course_title, students, instructor
 FROM courses
 WHERE course_title LIKE '%power bi%'
 ORDER BY students DESC;   
 
 -- Find the R Programming Course with the highest student
--- 'R Programming A-Z' ny Kirill Eremenko 259,934
+-- 'R Programming A-Z' ny Kirill Eremenko 260050 students
 SELECT course_title, students, instructor
 FROM courses
 WHERE course_title LIKE '%r programming%'
 ORDER BY students DESC;   
 
--- Find the Power BI Course with the highest student
--- 'Microsoft Power BI Desktop for Business' Maven Analytics 399,961
-SELECT course_title, students, instructor
-FROM courses
-WHERE course_title LIKE '%power bi%'
-ORDER BY students DESC;   
 
 -- Find the Machine Learning Course with the highest student
--- 'Machine Learning A-Z' by Kirill Eremenko 985,441
+-- 'Python for Data Science and Machine Learning' Jose Portilla 668,792
 SELECT course_title, students, instructor
 FROM courses
 WHERE course_title LIKE '% machine learning%'
@@ -144,7 +138,7 @@ ORDER BY students DESC;
 
 
 -- Find the Python Course with the highest time
--- '100 days of code' by Dr. Angela Yu 58 hours
+-- '100 days of code' by Dr. Angela Yu 57 hours
 SELECT course_title, time, instructor
 FROM courses
 WHERE course_title LIKE '%python%'
@@ -158,7 +152,7 @@ WHERE course_title LIKE '%sql%'
 ORDER BY time DESC;   
 
 -- Find the Excel Course with the highest time
--- 'Become a data analyst: Excel, sql etc' by Start Tech Academy 27 hours
+-- 'The Microsoft Excel Data Analysis Toolkit Bundle' - Simon Sez IT 32 hours
 SELECT course_title, time, instructor
 FROM courses
 WHERE course_title LIKE '%excel%'
@@ -172,14 +166,14 @@ WHERE course_title LIKE '%tableau%'
 ORDER BY time DESC;   
 
 -- Find the Power BI Course with the highest time
--- 'Power BI - Business Intelligence for Beginners' by BizticsCom King 33 hours
+-- 'PL-300 Certification': Microsoft Power BI Data Analyst 29 hours
 SELECT course_title, time, instructor
 FROM courses
 WHERE course_title LIKE '%power bi%'
 ORDER BY time DESC;   
 
 -- Find the R Programming Course with the highest time
--- 'Data Science with R: tidyverse' by Marko Intihar 31 hours
+-- 'R Programming A-Z' Kirill Eremenko
 SELECT course_title, time, instructor
 FROM courses
 WHERE course_title LIKE '%r programming%'
@@ -193,7 +187,7 @@ WHERE course_title LIKE '%machine learning%'
 ORDER BY time DESC; 
 
 -- Sorting Python, SQL, Excel and etc classes according to their date
--- 2023: 26, 2022: 1, Others: 3
+-- 2023: 16, 2022: 2, Others: 3
 
 SELECT 'Python Courses in 2023' AS Description, COUNT(course_title) AS Count
 FROM courses
@@ -208,7 +202,7 @@ FROM courses
 WHERE course_title LIKE '%python%' AND date NOT LIKE '%2023%' AND date NOT LIKE '%2022%';
 
 -- Sorting SQL to their years
--- 2023: 8, 2022: 3, Others: 1
+-- 2023: 9, 2022: 1 Others: 3
 SELECT 'Count of SQL Courses in 2023' AS Description, COUNT(course_title) AS Count
 FROM courses
 WHERE course_title LIKE '%sql%' AND date LIKE '%2023'
@@ -222,7 +216,7 @@ FROM courses
 WHERE course_title LIKE '%sql%' AND date NOT LIKE '%2023%' AND date NOT LIKE '%2022%';
 
 -- Sorting Excel Courses
--- 2023: 12, 2022: 0, Others: 2
+-- 2023: 12, 2022: 4, Others: 4
 SELECT 'Count of Excel Courses in 2023' AS Description, COUNT(course_title) AS Count
 FROM courses
 WHERE course_title LIKE '%excel%' AND date LIKE '%2023'
@@ -236,7 +230,7 @@ FROM courses
 WHERE course_title LIKE '%excel%' AND date NOT LIKE '%2023%' AND date NOT LIKE '%2022%';
 
 -- Sorting Tableau Courses
--- 2023: 11 , 2022: 1, Others:0
+-- 2023: 9 , 2022: 2, Others:1
 
 SELECT 'Count of Tableau Courses in 2023' AS Description, COUNT(course_title) AS Count
 FROM courses
@@ -252,7 +246,7 @@ WHERE course_title LIKE '%tableau%' AND date NOT LIKE '%2023%' AND date NOT LIKE
 
 
 -- Count of POWER BI Courses
--- 2023: 8, 2022: 0, Others: 1
+-- 2023: 8, 2022: 0, Others: 4
 SELECT 'Count of Power BI Courses in 2023' AS Description, COUNT(course_title) AS Count
 FROM courses
 WHERE course_title LIKE '%power bi%' AND date LIKE '%2023'
@@ -266,7 +260,7 @@ FROM courses
 WHERE course_title LIKE '%power bi%' AND date NOT LIKE '%2023%' AND date NOT LIKE '%2022%';
 
 -- Count of R Programming
--- 2023: 2, 2022: 1, Others, 1
+-- 2023: 1, 2022: 0, Others, 0
 SELECT 'Count of R Courses in 2023' AS Description, COUNT(course_title) AS Count
 FROM courses
 WHERE course_title LIKE '%r programming%' AND date LIKE '%2023'
@@ -280,7 +274,7 @@ FROM courses
 WHERE course_title LIKE '%r programming%' AND date NOT LIKE '%2023%' AND date NOT LIKE '%2022%';
 
 -- Count of Machine Learning Course
--- 2023: 8, 2022: 1, Others: 4
+-- 2023: 3, 2022: 1, Others: 4
 SELECT 'Count of Machine Learning Courses in 2023' AS Description, COUNT(course_title) AS Count
 FROM courses
 WHERE course_title LIKE '%machine learning%' AND date LIKE '%2023'
@@ -295,53 +289,55 @@ WHERE course_title LIKE '%machine learning%' AND date NOT LIKE '%2023%' AND date
 
 -- Find the class with the best rating based on date --
 
-SELECT title, rating, date
+SELECT course_title, rating, date
 FROM courses
 ORDER BY rating DESC;
 
 -- Best Classes in 2023
+-- Data Analyst Portfolio Creation, Data Bricks for Data Analysis
 SELECT course_title AS 'Best classes in 2023', rating, date
 FROM courses
 WHERE date LIKE '%2023%' AND rating >= 4.8;
 
 -- Best Classes in 2022
+-- Mastering Data Visualization and Data Analytics Intro to SQL Healthcare
 SELECT course_title AS 'Best Class in 2022', rating, date
 FROM courses
 WHERE date like '%2022%' AND rating >= 4.7;
 
 -- Best Classes in 2022 behind -- 
+-- Data Analysis: Excel for Beginners
 SELECT course_title, rating, date
 FROM courses
 WHERE date NOT LIKE '%2023%' AND date NOT LIKE '%2022%' AND rating >=4.8;
 
 -- Find the number of students in the highest rated class 
--- 'The Complete Python Bootcamp' 1,792,861 students with rating 4.6
--- 'Python for Everybody' 26,773 students, rating 4.8
+-- Data Analyst Portfolio Creation 145 students 4.9
 SELECT course_title, students, rating
 FROM courses
 WHERE rating >=4.5
 ORDER BY rating DESC;
 
 -- Find the number of students in the highest amount of hour
--- 'A deep understanding with Python' 58 hours, 23,301 students
--- 'The Complete Python Bootcamp from zero to hero' 1,792,861, 22 hours
+-- 100 days of code' 1,030,009 students, 57 hours
 SELECT course_title, students, time
 FROM courses
 ORDER BY students DESC;
 
 -- Instructor with the highest hour
--- Jose Portilla: 118
-SELECT instructor, sum(time)
+-- Kirill Eremenko: 151 hours
+SELECT instructor, sum(time) as 'total hours'
 FROM courses
-GROUP BY 1;
+GROUP BY 1
+ORDER BY 'total hours' DESC;
 
--- Instructor with the highest rating Malvik Vaghadia, R Tutorials and Cher Hin Chong 4.8
+-- Joseph Okon 4.8
 SELECT instructor, avg(rating)
 FROM courses
 GROUP BY 1 ;
 
 -- Instructor with the highest students
--- Jose Portilla: 3,374,357
+-- Kirill Eremenko 2,355,717
 SELECT instructor, sum(students)
 FROM courses
 GROUP BY 1;
@@ -352,19 +348,62 @@ FROM courses
 ORDER BY (rating/students) DESC 
 LIMIT 5;
 
--- Rating to time Ration
-SELECT course_title, rating, time, (rating/time) AS "Rating to Time Ratio", instructor
-FROM courses
-ORDER BY (rating/students) DESC 
-LIMIT 5;
+
 -- Classes 
--- 2023: 73
--- 2022: 10
--- Others: 17
+-- 2023: 67
+-- 2022: 12
+-- Others: 21
 SELECT COUNT(course_title)
 FROM courses
-WHERE DATE NOT LIKE '%2023%' AND DATE NOT LIKE '%2022%'
+WHERE DATE NOT LIKE '%2023%' AND DATE NOT LIKE '%2022%';
 
+SELECT COUNT(course_title)
+FROM courses
+WHERE DATE LIKE '%2022%';
 
+SELECT COUNT(course_title)
+FROM courses
+WHERE DATE LIKE '%2023%';
 
+-- Ratings to review ratio -- 0 till 1000
+SELECT course_title, rating, review, rating/review*100 AS rating_review_ratio, students, instructor
+FROM courses
+WHERE review <= 1000;
+
+-- Ratings to review ratio -- 1000 - 10,000
+SELECT course_title, rating, review, rating/review*100 AS rating_review_ratio, students, instructor
+FROM courses
+WHERE review BETWEEN 1000  AND 10000;
+
+-- Ratings to review ratio -- 10,000- 100,000
+SELECT course_title, rating, review, rating/review*100 AS rating_review_ratio, students, instructor
+FROM courses
+WHERE review BETWEEN 10000 AND 100000;
+
+-- Ratings to review ratio -- 100,000 above
+SELECT course_title, rating, review, rating/review*100 AS rating_review_ratio, students, instructor
+FROM courses
+WHERE review BETWEEN 100000 AND 300000;
+
+-- Price
+
+-- Does price affect ratings? 
+
+SELECT course_title, price, rating, price/rating*100 as 'Price/Rating ratio', instructor
+FROM courses;
+
+-- Does lower price means more students?
+-- Count the unique values of price --
+SELECT COUNT(PRICE), price
+FROM courses
+GROUP BY 2;
+
+SELECT SUM(students), price
+FROM courses
+GROUP BY 2;
+
+-- Which instructor gathers the most revenue? Kirill Eremenko
+SELECT SUM(price), instructor
+FROM courses
+GROUP BY 2;
 
