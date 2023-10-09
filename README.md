@@ -6,4 +6,4 @@ Here is an overview of my dashboard:
 <img width="836" alt="Screen Shot 2023-10-09 at 6 50 32 PM" src="https://github.com/carolinenata/sql_udemy/assets/138493962/4bd46bda-6922-4bfa-9e1f-826052b62292">
 
 
-Here is the link to my Tableau [dashboard](https://public.tableau.com/app/profile/caroline.natasia/viz/RecommendedDataAnalystCoursesUdemy/Dashboard1?publish=yes)https://public.tableau.com/app/profile/caroline.natasia/viz/RecommendedDataAnalystCoursesUdemy/Dashboard1?publish=yes. Enjoy!
+Here is the link to my Tableau [dashboard](https://public.tableau.com/app/profile/caroline.natasia/viz/RecommendedDataAnalystCoursesUdemy/Dashboard1?publish=yes)
